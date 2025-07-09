@@ -1,0 +1,22 @@
+<div class="speedometer-container">
+  <div class="speedometer" [class]="speedClass()">
+    <div class="image-container">
+      <img [src]="currentImage()" alt="Indicador de velocidad" class="speed-image">
+    </div>
+    <div class="dial">
+      <div class="needle" [style.transform]="needleRotation()"></div>
+    </div>
+    <div class="digital-display">
+      <span class="speed-value">{{speed()}}</span>
+      <span class="speed-unit">km/h</span>
+    </div>
+    <div class="controls">
+      <button (click)="accelerate()" class="btn accelerate">Acelerar (+5)</button>
+      <button (click)="brake()" class="btn brake">Frenar (-3)</button>
+      <button (click)="reset()" class="btn reset">Reiniciar</button>
+    </div>
+    <div class="speed-range-indicator">
+      Rango actual: <strong>{{speedRangeText()}}</strong>
+    </div>
+  </div>
+</div>

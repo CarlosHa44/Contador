@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Speed } from "./speed/speed";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Speed],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
